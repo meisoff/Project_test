@@ -1,0 +1,41 @@
+.fistPage__basket {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.fistPage__products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.fistPage__item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 26%;
+  align-items: center;
+
+  padding-bottom: 1rem;
+
+  background-color: $primary;
+  border-radius: 1.5rem;
+}
+
+.fistPage__item-name {
+  margin-bottom: 0;
+
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  line-height: 1.5;
+}
+
+.fistPage__item-price {
+  margin-bottom: 2rem;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+}

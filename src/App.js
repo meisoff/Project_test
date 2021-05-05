@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {HashRouter, Route} from "react-router-dom";
+import FirstPageContainer from "./components/FirstPage/FirstPageContainer";
+import SecondPageContainer from "./components/SecondPage/SecondPageContainer";
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <HashRouter>
+          <div className="container">
+              <Route exact path="/" render={() => <FirstPageContainer appState={props.appState} dispatch={props.dispatch}/> } />
+              <Route exact path="/second_page" render={() => <SecondPageContainer appState={props.appState} dispatch={props.dispatch}/> } />
+          </div>
+      </HashRouter>
   );
 }
 
